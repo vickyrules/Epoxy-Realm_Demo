@@ -8,7 +8,10 @@ import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.mine.realmsample.R
 
-@EpoxyModelClass
+@EpoxyModelClass(layout = R.layout.content_item)
+
+
+
 abstract class ListItemModel: EpoxyModelWithHolder<ListItemModel.ListItemHolder>() {
     @EpoxyAttribute
     lateinit var name:String

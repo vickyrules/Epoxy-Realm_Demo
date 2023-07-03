@@ -1,3 +1,5 @@
+
+
 plugins {
 
     id 'com.android.application'
@@ -8,10 +10,12 @@ plugins {
 
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 android {
-    kapt {
-        correctErrorTypes = true
-    }
+
     namespace 'com.mine.realmsample'
     compileSdk 33
 
@@ -45,34 +49,34 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
 
     //Realm
     implementation 'io.realm.kotlin:library-base:1.8.0' // Add to use local realm (no sync)
 //    implementation 'io.realm.kotlin:library-sync:1.8.0'// Add to use Device Sync
+
+    //Coroutines CORE
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
-    // Add to use coroutines with the SDK
 
-
-    // ViewModel
-    def lifecycle_version = "2.6.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
 
 
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.44.2"
-    kapt "com.google.dagger:hilt-compiler:2.44.2"
+    def hilt_version = "2.44"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
     implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
 
     //Epoxy
-    def epoxy_version = "5.1.2"
+    def epoxy_version = "5.1.0"
     implementation "com.airbnb.android:epoxy:$epoxy_version"
     kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
     implementation "com.airbnb.android:epoxy-databinding:$epoxy_version"

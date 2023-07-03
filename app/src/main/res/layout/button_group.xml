@@ -4,48 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
- >
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:maxLines="1"
             android:text="Add"
-            android:maxLines="1"
-            android:textStyle="bold"
-            android:layout_marginEnd="2dp"
-            />
+            android:enabled="false"
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/updateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:maxLines="1"
+            android:enabled="false"
             android:text="update"
-            android:maxLines="1"
-            android:textStyle="bold"
-            android:layout_marginEnd="2dp"
-            />
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:enabled="false"
+            android:maxLines="1"
             android:text="delete"
-            android:maxLines="1"
-            android:textStyle="bold"
-            android:layout_marginEnd="5dp"
-            />
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="filter"
-            android:maxLines="1"
-            android:textStyle="bold"
             android:layout_marginEnd="5dp"
-            />
+            android:maxLines="1"
+            android:enabled="false"
+            android:id="@+id/filterBtn"
+            android:text="filter"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
